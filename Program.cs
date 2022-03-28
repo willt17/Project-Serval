@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace Project_Serval
 {
@@ -14,12 +15,14 @@ namespace Project_Serval
         {
             int count = 0;
             StreamReader inFile = new StreamReader("testFile.Txt");
-            string[] temp = inFile.ReadLine();
-            while (temp != null)
+            string[] temp = new string[2];
+            string line = inFile.ReadLine();
+            while (line != null)
             {
+                temp = line.Split("#");
                 riderNumbers[count] = temp[0];
                 riderNames[count] = temp[1];
-                temp = inFile.ReadLine();
+                line = inFile.ReadLine();
                 count++;
             }
         }
