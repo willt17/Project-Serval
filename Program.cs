@@ -10,6 +10,11 @@ namespace Project_Serval
             Console.WriteLine("Hello World!");
             string[] riderNumbers = new string[999];
             string[] riderNames = new string[999];
+            DateTime startTime = CurrTime();
+            Console.ReadKey();
+            DateTime lapOne = CurrTime();
+            TimeSpan timeElapsed = (lapOne - startTime);
+            System.Console.WriteLine($"Your first lap took {timeElapsed}");
         }
         static void ImportRiders(string[] riderNumbers, string[] riderNames)
         {
@@ -25,6 +30,14 @@ namespace Project_Serval
                 line = inFile.ReadLine();
                 count++;
             }
+        }
+        static DateTime CurrTime()
+        {
+            DateTime curr = DateTime.Now;
+            string nowTime = curr.ToString();
+            // int intTime = int.Parse(curr);
+            System.Console.WriteLine(nowTime);
+            return curr;
         }
     }
 }
