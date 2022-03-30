@@ -44,7 +44,7 @@ namespace Project_Serval
             // System.Console.WriteLine(nowTime);
             return curr;
         }
-        static TimeSpan TimeDiff(DateTime x, DateTime y) // pass the older time first and vthe newer time second
+        static TimeSpan TimeDiff(DateTime x, DateTime y) // pass the older time first and the newer time second
         {
             TimeSpan timeElapsed = (x - y);
             // System.Console.WriteLine($"Your first lap took {timeElapsed}");
