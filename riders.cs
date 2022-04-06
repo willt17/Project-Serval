@@ -7,9 +7,9 @@ namespace Project_Serval
         private string lastName;
         private string riderClass;
     }
-    public int RiderNumber
+    public riders RiderNumber
     {
-        get { return riderNumber; }
+        get { return RiderNumber; }
         set 
         { 
             RiderNumber = int.Parse(value);
