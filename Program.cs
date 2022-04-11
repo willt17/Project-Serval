@@ -25,7 +25,7 @@ namespace Project_Serval
         {
             int count = 0;
             StreamReader inFile = new StreamReader("testFile.Txt");
-            string[] temp = new string[2];
+            string[] temp = new string[3];
             string line = inFile.ReadLine();
             while (line != null)
             {
@@ -34,8 +34,11 @@ namespace Project_Serval
                 // string TempLastName = temp[1];
                 // string tempRiderNumber = temp[2];
                 // string tempRiderClass = temp[3];
+                System.Console.WriteLine(currentRace[0]);
+                System.Console.WriteLine(temp[0]);
+                currentRace[count] = new riders();
                 currentRace[count].SetFirstName(temp[0]);
-                currentRace[count].SetFirstName(temp[1]);
+                currentRace[count].SetLastName(temp[1]);
                 currentRace[count].SetriderNumber(temp[2]);
                 currentRace[count].SetRiderClass(temp[3]);
                 line = inFile.ReadLine();
