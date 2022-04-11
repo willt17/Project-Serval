@@ -7,21 +7,21 @@ namespace Project_Serval
     {
         static void Main(string[] args)
         {
-            string[] riderNumbers = new string[999];
-            string[] riderNames = new string[999];
-            DateTime startTime = CurrTime();
-            Console.ReadKey();
-            System.Console.WriteLine("");
-            DateTime lapOne = CurrTime();
+            riders[] currentRace = new riders[999];
+            // DateTime startTime = CurrTime();
+            // Console.ReadKey();
+            // System.Console.WriteLine("");
+            // DateTime lapOne = CurrTime();
             // TimeSpan timeElapsed = (lapOne - startTime);
-            TimeSpan timeElapsed = TimeDiff(lapOne, startTime);
-            System.Console.WriteLine($"Your first lap took {timeElapsed}");
-            Console.ReadKey();
-            DateTime lapTwo = CurrTime();
-            timeElapsed = TimeDiff(lapTwo, lapOne);
-            System.Console.WriteLine($"Your second lap took {timeElapsed}");
+            // TimeSpan timeElapsed = TimeDiff(lapOne, startTime);
+            // System.Console.WriteLine($"Your first lap took {timeElapsed}");
+            // Console.ReadKey();
+            // DateTime lapTwo = CurrTime();
+            // timeElapsed = TimeDiff(lapTwo, lapOne);
+            // System.Console.WriteLine($"Your second lap took {timeElapsed}");
+            MenuMethod(currentRace);
         }
-        static void ImportRiders(string[] riderNumbers, string[] riderNames)
+        static void ImportRiders(riders[] currentRace)
         {
             int count = 0;
             StreamReader inFile = new StreamReader("testFile.Txt");
@@ -30,11 +30,19 @@ namespace Project_Serval
             while (line != null)
             {
                 temp = line.Split("#");
-                riderNumbers[count] = temp[0];
-                riderNames[count] = temp[1];
+                // string tempFirstName = temp[0];
+                // string TempLastName = temp[1];
+                // string tempRiderNumber = temp[2];
+                // string tempRiderClass = temp[3];
+                currentRace[count].SetFirstName(temp[0]);
+                currentRace[count].SetFirstName(temp[1]);
+                currentRace[count].SetriderNumber(temp[2]);
+                currentRace[count].SetRiderClass(temp[3]);
                 line = inFile.ReadLine();
                 count++;
             }
+            inFile.Close();
+            TestRead(currentRace, count);
         }
         static DateTime CurrTime()
         {
@@ -50,7 +58,7 @@ namespace Project_Serval
             // System.Console.WriteLine($"Your first lap took {timeElapsed}");
             return timeElapsed;
         }
-        static void MenuMethod()
+        static void MenuMethod(riders[] currentRace)
         {
             MenuText();
             string userInput = Console.ReadLine();
@@ -64,8 +72,9 @@ namespace Project_Serval
                 }
                 else if (userInput == "2")
                 {
-                    AddLap();
-                    MenuText();
+                    // AddLap();
+                    // MenuText();
+                    ImportRiders(currentRace);
                     userInput = Console.ReadLine();
                 }
                 else if (userInput == "3")
@@ -79,7 +88,7 @@ namespace Project_Serval
         }
         static void MenuText()
         {
-            System.Console.WriteLine("Stub for the menu text method.");
+            System.Console.WriteLine("Press 1 to add a rider, Press 2 to import riders from file.");
         }
         static void AddRider()
         {
@@ -92,6 +101,13 @@ namespace Project_Serval
         static void DisplayScoring()
         {
             System.Console.WriteLine("stub for the display scoring method.");
+        }
+        static void TestRead(riders[] currentRace, int count)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                System.Console.WriteLine($"first name is {currentRace[i].GetFirstName()}");
+            }
         }
     }
 }

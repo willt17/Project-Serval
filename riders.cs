@@ -13,7 +13,10 @@ namespace Project_Serval
         }
         public riders(string name1, string name2, string number, string inputClass)
         {
-
+            this.firstName = name1;
+            this.lastName = name2;
+            this.riderNumber = number;
+            this.riderClass = inputClass;
         }
         public void SetriderNumber(string number)
         {
