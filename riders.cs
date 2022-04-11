@@ -2,38 +2,46 @@ namespace Project_Serval
 {
     public class riders
     {
-        private int riderNumber;
+        private string riderNumber;
         private string firstName;
         private string lastName;
         private string riderClass;
-
-        public void SetriderNumber(int riderNumber)
+        public int count;
+        public riders()
         {
-            this.riderNumber = riderNumber;
+
         }
-        public int GetRiderNumber()
+        public riders(string name1, string name2, string number, string inputClass)
+        {
+
+        }
+        public void SetriderNumber(string number)
+        {
+            riderNumber = number;
+        }
+        public string GetRiderNumber()
         {
             return riderNumber;
         }
-        public void SetFirstName(string firstName)
+        public void SetFirstName(string name)
         {
-            this.firstName = firstName;
+            firstName = name;
         }
         public string GetFirstName()
         {
             return firstName;
         }
-        public void SetLastName(string lastName)
+        public void SetLastName(string name)
         {
-            this.lastName = lastName;
+            lastName = name;
         }
         public string GetLastName()
         {
             return lastName;
         }
-        public void SetRiderClass(string riderClass)
+        public void SetRiderClass(string userClass)
         {
-            this.riderClass = riderClass;
+            riderClass = userClass;
         }
         public string GetRiderClass()
         {
