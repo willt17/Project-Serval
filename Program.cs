@@ -34,8 +34,8 @@ namespace Project_Serval
                 // string TempLastName = temp[1];
                 // string tempRiderNumber = temp[2];
                 // string tempRiderClass = temp[3];
-                System.Console.WriteLine(currentRace[0]);
-                System.Console.WriteLine(temp[0]);
+                // System.Console.WriteLine(currentRace[0]);
+                // System.Console.WriteLine(temp[0]);
                 currentRace[count] = new riders();
                 currentRace[count].SetFirstName(temp[0]);
                 currentRace[count].SetLastName(temp[1]);
@@ -65,7 +65,7 @@ namespace Project_Serval
         {
             MenuText();
             string userInput = Console.ReadLine();
-            while (userInput != "4")
+            while (userInput != "9")
             {
                 if (userInput == "1")
                 {
@@ -84,6 +84,11 @@ namespace Project_Serval
                 {
                     DisplayScoring();
                     MenuText();
+                    userInput = Console.ReadLine();
+                }
+                else if (userInput == "4")
+                {
+                    StartRace();
                     userInput = Console.ReadLine();
                 }
 
@@ -111,6 +116,19 @@ namespace Project_Serval
             {
                 System.Console.WriteLine($"first name is {currentRace[i].GetFirstName()}");
             }
+        }
+        static void StartRace()
+        {
+            System.Console.WriteLine("This is a stub for the start race method.");
+            System.Console.WriteLine("What is the name of this race?");
+            string userInput = Console.ReadLine();
+            System.Console.WriteLine("Press any key to start the race.");
+            Console.ReadKey();
+            DateTime startTime = new DateTime();
+            startTime = CurrTime();
+            StreamWriter timeFile = new StreamWriter(userInput);
+            timeFile.WriteLine(startTime);
+            timeFile.Close();
         }
     }
 }
