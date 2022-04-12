@@ -114,7 +114,11 @@ namespace Project_Serval
         {
             for (int i = 0; i < count; i++)
             {
-                System.Console.WriteLine($"first name is {currentRace[i].GetFirstName()}");
+                System.Console.Write(currentRace[i].GetFirstName() + " ");
+                System.Console.Write(currentRace[i].GetLastName() + " ");
+                System.Console.Write(currentRace[i].GetRiderNumber() + " ");
+                System.Console.Write(currentRace[i].GetRiderClass());
+                System.Console.WriteLine(" ");
             }
         }
         static void StartRace()
@@ -128,7 +132,7 @@ namespace Project_Serval
             startTime = CurrTime();
             StreamWriter timeFile = new StreamWriter(userInput);
             timeFile.WriteLine(startTime);
-            timeFile.Close();
+            timeFile.Close(); 
         }
     }
 }
