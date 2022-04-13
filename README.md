@@ -1,4 +1,4 @@
 # Project-Serval
-Welcome to my project, I am attempting to make the worlds first open source timing and scoring system for racing of all kinds with a primary focus on harescrambles and enduros. I'm currently fleshing out the basic logic to handle inputs and outputs but will eventually look to add aa web based ui as well as getting hardware demos working.
-The main idea is to have the primary logic written in C# using the dotnet framework running locally on low powered hardware such as a Raspberry pi. the other necessary hardwire will be an rfid reader to pick up riders transponders as they pass through finish lines or gates.
+Welcome to my project, I am attempting to make the worlds first open source timing and scoring system for racing of all kinds with a primary focus on harescrambles and enduros. I'm currently fleshing out the basic logic to handle inputs and outputs but will eventually look to add a web based ui as well as getting hardware demos working.
+The main idea is to have the primary logic written in C# using the dotnet framework running locally on low powered hardware such as a Raspberry pi. the other necessary hardware will be an rfid reader to pick up riders transponders as they pass through finish lines or gates.
 in addition to the main program and ui I anticipate we will need a database solution more than likely SQLite.

@@ -6,7 +6,7 @@ namespace Project_Serval
         private string firstName;
         private string lastName;
         private string riderClass;
-        public int count;
+        static private int count = 0;
         public riders()
         {
 
@@ -50,6 +50,15 @@ namespace Project_Serval
         {
             return riderClass;
         }
+        static public int GetCount()
+        {
+            return count;
+        }
+        static public void IncCount()
+        {
+            count++;
+        }
+
 
 
 

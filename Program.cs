@@ -23,7 +23,7 @@ namespace Project_Serval
         }
         static void ImportRiders(riders[] currentRace)
         {
-            int count = 0;
+            // int count = 0;
             StreamReader inFile = new StreamReader("testFile.Txt");
             string[] temp = new string[3];
             string line = inFile.ReadLine();
@@ -36,16 +36,16 @@ namespace Project_Serval
                 // string tempRiderClass = temp[3];
                 System.Console.WriteLine(currentRace[0]);
                 System.Console.WriteLine(temp[0]);
-                currentRace[count] = new riders();
-                currentRace[count].SetFirstName(temp[0]);
-                currentRace[count].SetLastName(temp[1]);
-                currentRace[count].SetriderNumber(temp[2]);
-                currentRace[count].SetRiderClass(temp[3]);
+                currentRace[riders.GetCount()] = new riders();
+                currentRace[riders.GetCount()].SetFirstName(temp[0]);
+                currentRace[riders.GetCount()].SetLastName(temp[1]);
+                currentRace[riders.GetCount()].SetriderNumber(temp[2]);
+                currentRace[riders.GetCount()].SetRiderClass(temp[3]);
                 line = inFile.ReadLine();
-                count++;
+                riders.IncCount();
             }
             inFile.Close();
-            TestRead(currentRace, count);
+            // TestRead(currentRace, riders.GetCount());
         }
         static DateTime CurrTime()
         {
@@ -69,7 +69,7 @@ namespace Project_Serval
             {
                 if (userInput == "1")
                 {
-                    AddRider();
+                    AddRider(currentRace);
                     MenuText();
                     userInput = Console.ReadLine();
                 }
@@ -93,9 +93,20 @@ namespace Project_Serval
         {
             System.Console.WriteLine("Press 1 to add a rider, Press 2 to import riders from file.");
         }
-        static void AddRider()
+        static void AddRider(riders[] currentRace)
         {
             System.Console.WriteLine("Stub for the add rider method.");
+            System.Console.WriteLine("Input first name.");
+            string inputName = Console.ReadLine();
+            System.Console.WriteLine("Inout last name");
+            string inputLastName = Console.ReadLine();
+            System.Console.WriteLine("Enter number.");
+            string inputNumber = Console.ReadLine();
+            System.Console.WriteLine("Enter class.");
+            string inputClass = Console.ReadLine();
+            currentRace[riders.GetCount() + 1] = new riders(inputName, inputLastName, inputNumber, inputClass);
+            riders.IncCount();
+            arraySave(currentRace);
         }
         static void AddLap()
         {
@@ -111,6 +122,18 @@ namespace Project_Serval
             {
                 System.Console.WriteLine($"first name is {currentRace[i].GetFirstName()}");
             }
+        }
+        static void arraySave(riders[] currentRace)
+        { 
+            StreamWriter outFile = new StreamWriter("testFile.txt");
+            string outputLine = $"{currentRace[0].GetFirstName()}#{currentRace[0].GetLastName()}#{currentRace[0].GetRiderNumber()}#{currentRace[0].GetRiderClass()}";
+            outFile.WriteLine(outputLine);
+            for (int i = 1; i < riders.GetCount(); i++)
+            {
+                outputLine = $"{currentRace[i].GetFirstName()}#{currentRace[i].GetLastName()}#{currentRace[i].GetRiderNumber()}#{currentRace[i].GetRiderClass()}";
+                outFile.WriteLine(outputLine);
+            }
+            outFile.Close();
         }
     }
 }
