@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\willt\\Desktop\\School-Stuff\\MIS-221\\Project-Serval\\Project-Serval.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\willt\\Desktop\\School-Stuff\\MIS-221\\Project-Serval\\Project-Serval.csproj",
         "packagesPath": "C:\\Users\\willt\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\willt\\Desktop\\School-Stuff\\MIS-221\\Project-Serval\\obj\\",
+=======
+    "C:\\Users\\willt\\Project-Serval\\Project-Serval.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\willt\\Project-Serval\\Project-Serval.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\willt\\Project-Serval\\Project-Serval.csproj",
+        "projectName": "Project-Serval",
+        "projectPath": "C:\\Users\\willt\\Project-Serval\\Project-Serval.csproj",
+        "packagesPath": "C:\\Users\\willt\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\willt\\Project-Serval\\obj\\",
+>>>>>>> e2a80a91140470ff42401f2540e99219bbf1e62b
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\willt\\AppData\\Roaming\\NuGet\\NuGet.Config"
