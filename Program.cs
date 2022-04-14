@@ -34,7 +34,6 @@ namespace Project_Serval
                 // string TempLastName = temp[1];
                 // string tempRiderNumber = temp[2];
                 // string tempRiderClass = temp[3];
-<<<<<<< HEAD
                 System.Console.WriteLine(currentRace[0]);
                 System.Console.WriteLine(temp[0]);
                 currentRace[riders.GetCount()] = new riders();
@@ -42,15 +41,6 @@ namespace Project_Serval
                 currentRace[riders.GetCount()].SetLastName(temp[1]);
                 currentRace[riders.GetCount()].SetriderNumber(temp[2]);
                 currentRace[riders.GetCount()].SetRiderClass(temp[3]);
-=======
-                // System.Console.WriteLine(currentRace[0]);
-                // System.Console.WriteLine(temp[0]);
-                currentRace[count] = new riders();
-                currentRace[count].SetFirstName(temp[0]);
-                currentRace[count].SetLastName(temp[1]);
-                currentRace[count].SetriderNumber(temp[2]);
-                currentRace[count].SetRiderClass(temp[3]);
->>>>>>> e2a80a91140470ff42401f2540e99219bbf1e62b
                 line = inFile.ReadLine();
                 riders.IncCount();
             }
@@ -142,7 +132,6 @@ namespace Project_Serval
                 System.Console.WriteLine(" ");
             }
         }
-<<<<<<< HEAD
         static void arraySave(riders[] currentRace)
         { 
             StreamWriter outFile = new StreamWriter("testFile.txt");
@@ -154,20 +143,10 @@ namespace Project_Serval
                 outFile.WriteLine(outputLine);
             }
             outFile.Close();
-=======
+        }
         static void StartRace()
         {
             System.Console.WriteLine("This is a stub for the start race method.");
-            System.Console.WriteLine("What is the name of this race?");
-            string userInput = Console.ReadLine();
-            System.Console.WriteLine("Press any key to start the race.");
-            Console.ReadKey();
-            DateTime startTime = new DateTime();
-            startTime = CurrTime();
-            StreamWriter timeFile = new StreamWriter(userInput);
-            timeFile.WriteLine(startTime);
-            timeFile.Close(); 
->>>>>>> e2a80a91140470ff42401f2540e99219bbf1e62b
         }
     }
 }
