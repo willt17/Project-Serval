@@ -1,14 +1,15 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "MMYEz0OeU3+ouXCWwNkpdgyefqkKivf187i95KuWNT1Beuu5jQec9V3CHCU3z02JnHlcjMO2Rjb/AkZsT6UP0Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\willt\\Desktop\\School-Stuff\\MIS-221\\Project-Serval\\Project-Serval.csproj",
-=======
-  "dgSpecHash": "EyIRdYMCptkAHfbxJGQoDt34mGMx5B1OJsxWEZUAYrnBsJlAiPpQcRZ9medZ5w2AalXbY8JLqSo5XSgwHksucg==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\willt\\Project-Serval\\Project-Serval.csproj",
->>>>>>> e2a80a91140470ff42401f2540e99219bbf1e62b
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\willt\\Desktop\\School-Stuff\\MIS-221\\Project-Serval\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

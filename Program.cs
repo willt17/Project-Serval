@@ -109,7 +109,7 @@ namespace Project_Serval
             string inputNumber = Console.ReadLine();
             System.Console.WriteLine("Enter class.");
             string inputClass = Console.ReadLine();
-            currentRace[riders.GetCount() + 1] = new riders(inputName, inputLastName, inputNumber, inputClass);
+            currentRace[riders.GetCount()] = new riders(inputName, inputLastName, inputNumber, inputClass);
             riders.IncCount();
             arraySave(currentRace);
         }
@@ -134,7 +134,7 @@ namespace Project_Serval
         }
         static void arraySave(riders[] currentRace)
         { 
-            StreamWriter outFile = new StreamWriter("testFile.txt");
+            StreamWriter outFile = new StreamWriter("testFile.txt", true);
             string outputLine = $"{currentRace[0].GetFirstName()}#{currentRace[0].GetLastName()}#{currentRace[0].GetRiderNumber()}#{currentRace[0].GetRiderClass()}";
             outFile.WriteLine(outputLine);
             for (int i = 1; i < riders.GetCount(); i++)

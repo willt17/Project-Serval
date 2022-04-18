@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\willt\\Project-Serval\\Project-Serval.csproj",
+      "projectUniqueName": "C:\\Users\\willt\\Desktop\\School-Stuff\\MIS-221\\Project-Serval\\Project-Serval.csproj",
       "projectName": "Project-Serval",
-      "projectPath": "C:\\Users\\willt\\Project-Serval\\Project-Serval.csproj",
+      "projectPath": "C:\\Users\\willt\\Desktop\\School-Stuff\\MIS-221\\Project-Serval\\Project-Serval.csproj",
       "packagesPath": "C:\\Users\\willt\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\willt\\Project-Serval\\obj\\",
+      "outputPath": "C:\\Users\\willt\\Desktop\\School-Stuff\\MIS-221\\Project-Serval\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\willt\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -61,5 +61,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\willt\\Desktop\\School-Stuff\\MIS-221\\Project-Serval\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
