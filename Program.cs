@@ -34,8 +34,8 @@ namespace Project_Serval
                 // string TempLastName = temp[1];
                 // string tempRiderNumber = temp[2];
                 // string tempRiderClass = temp[3];
-                System.Console.WriteLine(currentRace[0]);
-                System.Console.WriteLine(temp[0]);
+                // System.Console.WriteLine(currentRace[0]);
+                // System.Console.WriteLine(temp[0]);
                 currentRace[riders.GetCount()] = new riders();
                 currentRace[riders.GetCount()].SetFirstName(temp[0]);
                 currentRace[riders.GetCount()].SetLastName(temp[1]);
@@ -103,7 +103,7 @@ namespace Project_Serval
             System.Console.WriteLine("Stub for the add rider method.");
             System.Console.WriteLine("Input first name.");
             string inputName = Console.ReadLine();
-            System.Console.WriteLine("Inout last name");
+            System.Console.WriteLine("Input last name");
             string inputLastName = Console.ReadLine();
             System.Console.WriteLine("Enter number.");
             string inputNumber = Console.ReadLine();
@@ -134,7 +134,7 @@ namespace Project_Serval
         }
         static void arraySave(riders[] currentRace)
         { 
-            StreamWriter outFile = new StreamWriter("testFile.txt", true);
+            StreamWriter outFile = new StreamWriter("testFile.txt");
             string outputLine = $"{currentRace[0].GetFirstName()}#{currentRace[0].GetLastName()}#{currentRace[0].GetRiderNumber()}#{currentRace[0].GetRiderClass()}";
             outFile.WriteLine(outputLine);
             for (int i = 1; i < riders.GetCount(); i++)
