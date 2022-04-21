@@ -6,17 +6,19 @@ namespace Project_Serval
         private string firstName;
         private string lastName;
         private string riderClass;
+        private string transponderNumber;
         static private int count = 0;
         public riders()
         {
 
         }
-        public riders(string name1, string name2, string number, string inputClass)
+        public riders(string name1, string name2, string number, string inputClass, string transponderInput)
         {
             this.firstName = name1;
             this.lastName = name2;
             this.riderNumber = number;
             this.riderClass = inputClass;
+            this.transponderNumber = transponderInput;
         }
         public void SetriderNumber(string number)
         {
@@ -57,6 +59,20 @@ namespace Project_Serval
         static public void IncCount()
         {
             count++;
+        }
+        public void ToString()
+        {
+            string outputString = ($"First name: {this.firstName} Last name: {this.lastName} Number: {this.riderNumber} Class: {this.riderClass}");
+            System.Console.WriteLine(outputString);
+        }
+        public string GetTransponderNumber()
+        {
+            string outputString = this.transponderNumber;
+            return outputString;
+        }
+        public void SetTransponderNumber(string inputNumber)
+        {
+            this.transponderNumber = inputNumber;
         }
 
 

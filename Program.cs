@@ -25,7 +25,7 @@ namespace Project_Serval
         {
             // int count = 0;
             StreamReader inFile = new StreamReader("testFile.Txt");
-            string[] temp = new string[3];
+            string[] temp = new string[4];
             string line = inFile.ReadLine();
             while (line != null)
             {
@@ -41,6 +41,7 @@ namespace Project_Serval
                 currentRace[riders.GetCount()].SetLastName(temp[1]);
                 currentRace[riders.GetCount()].SetriderNumber(temp[2]);
                 currentRace[riders.GetCount()].SetRiderClass(temp[3]);
+                currentRace[riders.GetCount()].SetTransponderNumber(temp[4]);
                 line = inFile.ReadLine();
                 riders.IncCount();
             }
@@ -91,6 +92,11 @@ namespace Project_Serval
                     StartRace();
                     userInput = Console.ReadLine();
                 }
+                else if (userInput == "5")
+                {
+                    TestToString(currentRace);
+                    userInput = Console.ReadLine();
+                }
 
             }
         }
@@ -109,7 +115,9 @@ namespace Project_Serval
             string inputNumber = Console.ReadLine();
             System.Console.WriteLine("Enter class.");
             string inputClass = Console.ReadLine();
-            currentRace[riders.GetCount()] = new riders(inputName, inputLastName, inputNumber, inputClass);
+            System.Console.WriteLine("Please scan the riders transponder.");
+            string transponderInput = Console.ReadLine();
+            currentRace[riders.GetCount()] = new riders(inputName, inputLastName, inputNumber, inputClass, transponderInput);
             riders.IncCount();
             arraySave(currentRace);
         }
@@ -147,6 +155,33 @@ namespace Project_Serval
         static void StartRace()
         {
             System.Console.WriteLine("This is a stub for the start race method.");
+        }
+        static void TestToString(riders[] currentRace)
+        {
+            System.Console.WriteLine("Please scan the riders transponder.");
+            string searchVal = Console.ReadLine();
+            int currentRider = SearchFunction(searchVal, currentRace);
+            if (currentRider == -1)
+            {
+                System.Console.WriteLine("That rider is not entered in this race.");
+            }
+            else
+            {
+                currentRace[currentRider].ToString();
+            }
+        }
+        static int SearchFunction(string searchVal, riders[] currentRace)
+        {
+            int arraySpot = -1;
+            for (int i = 0; i < riders.GetCount(); i++)
+            {
+                if (searchVal == currentRace[i].GetTransponderNumber())
+                {
+                    arraySpot = i;
+                }
+            }
+            return arraySpot;
+            
         }
     }
 }

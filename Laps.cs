@@ -30,7 +30,7 @@ namespace Project_Serval
             int lapCount = 0;
             for (int i = 0; i < overallLaps; i++ )
             {
-                if (thisRace[i].GetRiderNumber().ToUpper == riderNumberInput.ToUpper)
+                if (thisRace[i].GetRiderNumber() == riderNumberInput)
                 {
                     lapCount++;
                 }
@@ -39,7 +39,7 @@ namespace Project_Serval
         }
         public string GetRiderNumber()
         {
-            return this.riderNumber;
+            return riderNumber;
         }
     }
 }
