@@ -134,12 +134,12 @@ namespace Project_Serval
             string userInput = Console.ReadLine();
             if (userInput == "1")
             {
-                OngoingRace(raceStartTime);
+                OngoingRace(raceStartTime, currentRace, thisRace);
             }
             else if (userInput == "2")
             {
                 raceStartTime = StartRace();
-                OngoingRace(raceStartTime);
+                OngoingRace(raceStartTime, currentRace, thisRace);
             }
         }
         static void TestRead(riders[] currentRace, int count)
@@ -198,7 +198,7 @@ namespace Project_Serval
             return arraySpot;
             
         }
-        static void OngoingRace(DateTime raceStartTime)
+        static void OngoingRace(DateTime raceStartTime, riders[] currentRace, Laps[] thisRace)
         {
             string value = "1";
             while (value != "stop")
@@ -212,7 +212,10 @@ namespace Project_Serval
                 else
                 {
                     int placeholder = Laps.GetOverallLap() + 1;
-                    thisrace[placeholder] = new Laps(value);   
+                    int numberTemp = riders.RiderSearch(value);
+                    string localRiderNumber = currentRace[numberTemp].GetRiderNumber();
+                    DateTime nowTime = CurrTime();
+                    thisRace[placeholder] = new Laps(value, nowTime, thisRace);   
                 }
             }
         }

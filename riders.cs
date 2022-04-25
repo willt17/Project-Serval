@@ -74,6 +74,18 @@ namespace Project_Serval
         {
             this.transponderNumber = inputNumber;
         }
+        public int RiderSearch(string transponderNumber, riders[] thisRace)
+        {
+            int count = -1;
+            for (int i = 0; i < riders.GetCount(); i++)
+            {
+                if (transponderNumber == thisRace[i].GetRiderNumber())
+                {
+                    count = i;
+                }
+            }
+            return count;
+        }
 
 
 
