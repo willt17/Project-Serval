@@ -41,5 +41,9 @@ namespace Project_Serval
         {
             return riderNumber;
         }
+        public static int GetOverallLap()
+        {
+            return overallLaps;
+        }
     }
 }

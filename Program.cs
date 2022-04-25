@@ -211,7 +211,8 @@ namespace Project_Serval
                 }
                 else
                 {
-                    
+                    int placeholder = Laps.GetOverallLap() + 1;
+                    thisrace[placeholder] = new Laps(value);   
                 }
             }
         }
