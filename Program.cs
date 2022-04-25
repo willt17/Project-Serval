@@ -8,6 +8,7 @@ namespace Project_Serval
         static void Main(string[] args)
         {
             riders[] currentRace = new riders[999];
+            Laps[] thisRace = new Laps[999];
             // DateTime startTime = CurrTime();
             // Console.ReadKey();
             // System.Console.WriteLine("");
@@ -19,7 +20,7 @@ namespace Project_Serval
             // DateTime lapTwo = CurrTime();
             // timeElapsed = TimeDiff(lapTwo, lapOne);
             // System.Console.WriteLine($"Your second lap took {timeElapsed}");
-            MenuMethod(currentRace);
+            MenuMethod(currentRace, thisRace);
         }
         static void ImportRiders(riders[] currentRace)
         {
@@ -62,8 +63,9 @@ namespace Project_Serval
             // System.Console.WriteLine($"Your first lap took {timeElapsed}");
             return timeElapsed;
         }
-        static void MenuMethod(riders[] currentRace)
+        static void MenuMethod(riders[] currentRace, Laps[] thisRace)
         {
+            DateTime raceStartTime = CurrTime();
             MenuText();
             string userInput = Console.ReadLine();
             while (userInput != "9")
@@ -83,13 +85,13 @@ namespace Project_Serval
                 }
                 else if (userInput == "3")
                 {
-                    DisplayScoring();
+                    DisplayScoring(raceStartTime, currentRace, thisRace);
                     MenuText();
                     userInput = Console.ReadLine();
                 }
                 else if (userInput == "4")
                 {
-                    StartRace();
+                    raceStartTime = StartRace();
                     userInput = Console.ReadLine();
                 }
                 else if (userInput == "5")
@@ -103,6 +105,7 @@ namespace Project_Serval
         static void MenuText()
         {
             System.Console.WriteLine("Press 1 to add a rider, Press 2 to import riders from file.");
+            System.Console.WriteLine("Press 3 to enter scoring mode, press 4 to start a new race.");
         }
         static void AddRider(riders[] currentRace)
         {
@@ -125,9 +128,19 @@ namespace Project_Serval
         {
             System.Console.WriteLine("Stub for the add lap method.");
         }
-        static void DisplayScoring()
+        static void DisplayScoring(DateTime raceStartTime, riders[] currentRace, Laps[] thisRace)
         {
-            System.Console.WriteLine("stub for the display scoring method.");
+            System.Console.WriteLine("Have You run the Race Start function? If so press 1, or press 2 to do it now.");
+            string userInput = Console.ReadLine();
+            if (userInput == "1")
+            {
+                OngoingRace(raceStartTime);
+            }
+            else if (userInput == "2")
+            {
+                raceStartTime = StartRace();
+                OngoingRace(raceStartTime);
+            }
         }
         static void TestRead(riders[] currentRace, int count)
         {
@@ -152,9 +165,11 @@ namespace Project_Serval
             }
             outFile.Close();
         }
-        static void StartRace()
+        static DateTime StartRace()
         {
-            System.Console.WriteLine("This is a stub for the start race method.");
+            DateTime raceStartTime = CurrTime();
+            System.Console.WriteLine($"Your race has been started at {raceStartTime}.");
+            return raceStartTime;
         }
         static void TestToString(riders[] currentRace)
         {
@@ -182,6 +197,23 @@ namespace Project_Serval
             }
             return arraySpot;
             
+        }
+        static void OngoingRace(DateTime raceStartTime)
+        {
+            string value = "1";
+            while (value != "stop")
+            {
+                System.Console.WriteLine("Scan riders transponders or type stop to end.");
+                value = Console.ReadLine();
+                if (value == "stop")
+                {
+                    System.Console.WriteLine("This race has ended.");
+                }
+                else
+                {
+                    
+                }
+            }
         }
     }
 }

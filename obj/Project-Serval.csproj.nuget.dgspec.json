@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\willt\\project-serval\\Project-Serval.csproj": {}
+    "C:\\Users\\willt\\Project-Serval\\Project-Serval.csproj": {}
   },
   "projects": {
-    "C:\\Users\\willt\\project-serval\\Project-Serval.csproj": {
+    "C:\\Users\\willt\\Project-Serval\\Project-Serval.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\willt\\project-serval\\Project-Serval.csproj",
+        "projectUniqueName": "C:\\Users\\willt\\Project-Serval\\Project-Serval.csproj",
         "projectName": "Project-Serval",
-        "projectPath": "C:\\Users\\willt\\project-serval\\Project-Serval.csproj",
+        "projectPath": "C:\\Users\\willt\\Project-Serval\\Project-Serval.csproj",
         "packagesPath": "C:\\Users\\willt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\willt\\project-serval\\obj\\",
+        "outputPath": "C:\\Users\\willt\\Project-Serval\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\willt\\AppData\\Roaming\\NuGet\\NuGet.Config"

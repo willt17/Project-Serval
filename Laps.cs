@@ -9,9 +9,9 @@ namespace Project_Serval
         private DateTime startTime;
         private DateTime endTime;
         private static int overallLaps = 0;
-        public Laps(int lapInput, string numberInput, DateTime firstTime, DateTime secondTime)
+        public Laps(string numberInput, DateTime firstTime, DateTime secondTime, Laps[] thisRace)
         {
-            this.lapNumber = lapInput;
+            this.lapNumber = FindLap(numberInput, thisRace);
             this.riderNumber = numberInput;
             this.startTime = firstTime;
             this.endTime = secondTime;
