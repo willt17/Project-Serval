@@ -212,10 +212,11 @@ namespace Project_Serval
                 else
                 {
                     int placeholder = Laps.GetOverallLap() + 1;
-                    int numberTemp = riders.RiderSearch(value);
+                    int numberTemp = currentRace.RiderSearch(value, currentRace);
                     string localRiderNumber = currentRace[numberTemp].GetRiderNumber();
                     DateTime nowTime = CurrTime();
-                    thisRace[placeholder] = new Laps(value, nowTime, thisRace);   
+                    thisRace[placeholder] = new Laps(value, nowTime, thisRace);
+                    Laps.IncOverallLaps();
                 }
             }
         }

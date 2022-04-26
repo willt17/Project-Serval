@@ -49,7 +49,7 @@ namespace Project_Serval
         {
             Laps[] temp = new Laps[99];
             int count = 0;
-            for (int i = 0; i < GetOverallLap; i++)
+            for (int i = 0; i < GetOverallLap(); i++)
             {
                 if (thisRace[i].GetRiderNumber() == riderNumber)
                 {
@@ -70,8 +70,16 @@ namespace Project_Serval
                     maxLap = temp[i].GetLapNumber();
                 }
             }
-            DateTime returnValue = temp[count].GetLapNumber();
+            DateTime returnValue = temp[count].GetEndTime();
             return returnValue;
+        }
+        public DateTime GetEndTime()
+        {
+            return endTime;
+        }
+        public static void IncOverallLaps()
+        {
+            overallLaps++;
         }
     }
 }
