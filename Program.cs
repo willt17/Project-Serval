@@ -186,7 +186,7 @@ namespace Project_Serval
             }
             else
             {
-                currentRace[currentRider].ToString();
+                System.Console.WriteLine(currentRace[currentRider].ToString());
             }
         }
         static int SearchFunction(string searchVal, riders[] currentRace)
