@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "EyIRdYMCptkAHfbxJGQoDt34mGMx5B1OJsxWEZUAYrnBsJlAiPpQcRZ9medZ5w2AalXbY8JLqSo5XSgwHksucg==",
+  "dgSpecHash": "zsYNySNlmpUgMz03/U0W9CvKZmGnDA6op7m/8uykswrg7fvg/hMFE1W7sRgJ1Xi971h+/f5uXlJAB0rzzWU3Xg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\willt\\Project-Serval\\Project-Serval.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Beenj\\Source\\Repos\\Parvieda\\Project-Serval\\Project-Serval.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Beenj\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512"
+  ],
   "logs": []
 }

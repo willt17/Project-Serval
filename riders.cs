@@ -7,7 +7,7 @@ namespace Project_Serval
         private string lastName;
         private string riderClass;
         private string transponderNumber;
-        static private int count = 0;
+        static private int count;
         public riders()
         {
 
@@ -52,6 +52,11 @@ namespace Project_Serval
         {
             return riderClass;
         }
+
+        static public void SetCount(int temp)
+        {
+            count = temp;
+        }
         static public int GetCount()
         {
             return count;
@@ -60,10 +65,9 @@ namespace Project_Serval
         {
             count++;
         }
-        public void ToString()
+        public override string ToString()
         {
-            string outputString = ($"First name: {this.firstName} Last name: {this.lastName} Number: {this.riderNumber} Class: {this.riderClass}");
-            System.Console.WriteLine(outputString);
+            return $"First name: {this.firstName} Last name: {this.lastName} Number: {this.riderNumber} Class: {this.riderClass}";
         }
         public string GetTransponderNumber()
         {
@@ -74,7 +78,7 @@ namespace Project_Serval
         {
             this.transponderNumber = inputNumber;
         }
-        public int RiderSearch(string transponderNumber, riders[] thisRace)
+        public static int RiderSearch(string transponderNumber, riders[] thisRace)
         {
             int count = -1;
             for (int i = 0; i < riders.GetCount(); i++)

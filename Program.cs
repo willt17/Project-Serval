@@ -25,24 +25,25 @@ namespace Project_Serval
         static void ImportRiders(riders[] currentRace)
         {
             // int count = 0;
+            riders.SetCount(0);
             StreamReader inFile = new StreamReader("testFile.Txt");
-            string[] temp = new string[4];
             string line = inFile.ReadLine();
             while (line != null)
             {
-                temp = line.Split("#");
+                string[] temp = line.Split("#");
                 // string tempFirstName = temp[0];
                 // string TempLastName = temp[1];
                 // string tempRiderNumber = temp[2];
                 // string tempRiderClass = temp[3];
                 // System.Console.WriteLine(currentRace[0]);
                 // System.Console.WriteLine(temp[0]);
+                System.Console.WriteLine($"{temp[0]} {temp[1]} {temp[2]} {temp[3]}");
                 currentRace[riders.GetCount()] = new riders();
                 currentRace[riders.GetCount()].SetFirstName(temp[0]);
                 currentRace[riders.GetCount()].SetLastName(temp[1]);
                 currentRace[riders.GetCount()].SetriderNumber(temp[2]);
                 currentRace[riders.GetCount()].SetRiderClass(temp[3]);
-                currentRace[riders.GetCount()].SetTransponderNumber(temp[4]);
+                //currentRace[riders.GetCount()].SetTransponderNumber(temp[4]);
                 line = inFile.ReadLine();
                 riders.IncCount();
             }
@@ -81,6 +82,7 @@ namespace Project_Serval
                     // AddLap();
                     // MenuText();
                     ImportRiders(currentRace);
+                    MenuText();
                     userInput = Console.ReadLine();
                 }
                 else if (userInput == "3")
@@ -92,11 +94,13 @@ namespace Project_Serval
                 else if (userInput == "4")
                 {
                     raceStartTime = StartRace();
+                    MenuText();
                     userInput = Console.ReadLine();
                 }
                 else if (userInput == "5")
                 {
                     TestToString(currentRace);
+                    MenuText();
                     userInput = Console.ReadLine();
                 }
 
@@ -154,7 +158,7 @@ namespace Project_Serval
             }
         }
         static void arraySave(riders[] currentRace)
-        { 
+        {
             StreamWriter outFile = new StreamWriter("testFile.txt");
             string outputLine = $"{currentRace[0].GetFirstName()}#{currentRace[0].GetLastName()}#{currentRace[0].GetRiderNumber()}#{currentRace[0].GetRiderClass()}";
             outFile.WriteLine(outputLine);
@@ -196,23 +200,23 @@ namespace Project_Serval
                 }
             }
             return arraySpot;
-            
+
         }
         static void OngoingRace(DateTime raceStartTime, riders[] currentRace, Laps[] thisRace)
         {
             string value = "1";
             while (value != "stop")
             {
-                System.Console.WriteLine("Scan riders transponders or type stop to end.");
+                System.Console.WriteLine("Scan riders transponders or type STOP to end.");
                 value = Console.ReadLine();
-                if (value == "stop")
+                if (value.ToLower() == "stop")
                 {
                     System.Console.WriteLine("This race has ended.");
                 }
                 else
                 {
                     int placeholder = Laps.GetOverallLap() + 1;
-                    int numberTemp = currentRace.RiderSearch(value, currentRace);
+                    int numberTemp = riders.RiderSearch(value, currentRace);
                     string localRiderNumber = currentRace[numberTemp].GetRiderNumber();
                     DateTime nowTime = CurrTime();
                     thisRace[placeholder] = new Laps(value, nowTime, thisRace);
