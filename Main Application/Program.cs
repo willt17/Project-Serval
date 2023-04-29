@@ -10,7 +10,7 @@ namespace Project_Serval
             riders[] currentRace = new riders[999];
             Laps[] thisRace = new Laps[999];
             // DateTime startTime = CurrTime();
-            // Console.ReadKey();
+            Console.ReadKey();
             // System.Console.WriteLine("");
             // DateTime lapOne = CurrTime();
             // TimeSpan timeElapsed = (lapOne - startTime);
