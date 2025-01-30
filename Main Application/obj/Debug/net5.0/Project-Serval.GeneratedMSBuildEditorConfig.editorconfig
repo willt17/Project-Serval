@@ -7,8 +7,4 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Project_Serval
-<<<<<<< HEAD:Main Application/obj/Debug/net5.0/Project-Serval.GeneratedMSBuildEditorConfig.editorconfig
-build_property.ProjectDir = c:\Users\willt\Desktop\School-Stuff\MIS-221\Project-Serval\
-=======
-build_property.ProjectDir = c:\Users\willt\Project-Serval\
->>>>>>> refs/remotes/origin/main:obj/Debug/net5.0/Project-Serval.GeneratedMSBuildEditorConfig.editorconfig
+build_property.ProjectDir = c:\Users\willt\Project-Serval\Main Application\

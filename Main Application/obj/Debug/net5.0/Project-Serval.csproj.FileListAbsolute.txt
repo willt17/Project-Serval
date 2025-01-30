@@ -46,3 +46,19 @@ C:\Users\Beenj\Source\Repos\Parvieda\Project-Serval\bin\Debug\net5.0\Project-Ser
 C:\Users\Beenj\Source\Repos\Parvieda\Project-Serval\bin\Debug\net5.0\ref\Project-Serval.dll
 C:\Users\Beenj\Source\Repos\Parvieda\Project-Serval\bin\Debug\net5.0\Project-Serval.pdb
 C:\Users\Beenj\Source\Repos\Parvieda\Project-Serval\obj\Debug\net5.0\Project-Serval.genruntimeconfig.cache
+C:\Users\willt\Project-Serval\Main Application\bin\Debug\net5.0\Project-Serval.exe
+C:\Users\willt\Project-Serval\Main Application\bin\Debug\net5.0\Project-Serval.deps.json
+C:\Users\willt\Project-Serval\Main Application\bin\Debug\net5.0\Project-Serval.runtimeconfig.json
+C:\Users\willt\Project-Serval\Main Application\bin\Debug\net5.0\Project-Serval.runtimeconfig.dev.json
+C:\Users\willt\Project-Serval\Main Application\bin\Debug\net5.0\Project-Serval.dll
+C:\Users\willt\Project-Serval\Main Application\bin\Debug\net5.0\Project-Serval.pdb
+C:\Users\willt\Project-Serval\Main Application\obj\Debug\net5.0\Project-Serval.csproj.AssemblyReference.cache
+C:\Users\willt\Project-Serval\Main Application\obj\Debug\net5.0\Project-Serval.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\willt\Project-Serval\Main Application\obj\Debug\net5.0\Project-Serval.AssemblyInfoInputs.cache
+C:\Users\willt\Project-Serval\Main Application\obj\Debug\net5.0\Project-Serval.AssemblyInfo.cs
+C:\Users\willt\Project-Serval\Main Application\obj\Debug\net5.0\Project-Serval.csproj.CoreCompileInputs.cache
+C:\Users\willt\Project-Serval\Main Application\obj\Debug\net5.0\Project-Serval.dll
+C:\Users\willt\Project-Serval\Main Application\obj\Debug\net5.0\refint\Project-Serval.dll
+C:\Users\willt\Project-Serval\Main Application\obj\Debug\net5.0\Project-Serval.pdb
+C:\Users\willt\Project-Serval\Main Application\obj\Debug\net5.0\Project-Serval.genruntimeconfig.cache
+C:\Users\willt\Project-Serval\Main Application\obj\Debug\net5.0\ref\Project-Serval.dll

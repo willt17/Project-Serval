@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Beenj\\Source\\Repos\\Parvieda\\Project-Serval\\Project-Serval.csproj": {}
+    "C:\\Users\\willt\\Project-Serval\\Main Application\\Project-Serval.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Beenj\\Source\\Repos\\Parvieda\\Project-Serval\\Project-Serval.csproj": {
+    "C:\\Users\\willt\\Project-Serval\\Main Application\\Project-Serval.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Beenj\\Source\\Repos\\Parvieda\\Project-Serval\\Project-Serval.csproj",
+        "projectUniqueName": "C:\\Users\\willt\\Project-Serval\\Main Application\\Project-Serval.csproj",
         "projectName": "Project-Serval",
-        "projectPath": "C:\\Users\\Beenj\\Source\\Repos\\Parvieda\\Project-Serval\\Project-Serval.csproj",
-        "packagesPath": "C:\\Users\\Beenj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Beenj\\Source\\Repos\\Parvieda\\Project-Serval\\obj\\",
+        "projectPath": "C:\\Users\\willt\\Project-Serval\\Main Application\\Project-Serval.csproj",
+        "packagesPath": "C:\\Users\\willt\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\willt\\Project-Serval\\Main Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Beenj\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\willt\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,14 +43,15 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[5.0.13, 5.0.13]"
+              "version": "[5.0.17, 5.0.17]"
             }
           ],
           "frameworkReferences": {
@@ -60,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     }
