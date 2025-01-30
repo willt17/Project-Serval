@@ -217,7 +217,8 @@ namespace Project_Serval
                 {
                     int placeholder = Laps.GetOverallLap() + 1;
                     int numberTemp = riders.RiderSearch(value, currentRace);
-                    string localRiderNumber = currentRace[numberTemp].GetRiderNumber();
+                    string tempString = numberTemp.ToString();
+                    int localRiderNumber = riders.RiderSearch(tempString, currentRace);
                     DateTime nowTime = CurrTime();
                     thisRace[placeholder] = new Laps(value, nowTime, thisRace);
                     Laps.IncOverallLaps();
